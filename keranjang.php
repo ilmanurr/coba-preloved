@@ -11,8 +11,8 @@ if (isset($_SESSION['username'])) {
 function getTotalCartQuantity() {
     $totalQuantity = 0;
 
-    if (isset($_SESSION['shopping_cart'])) {
-        foreach ($_SESSION['shopping_cart'] as $item) {
+    if (isset($_SESSION['checkout_products'])) {
+        foreach ($_SESSION['checkout_products'] as $item) {
             $totalQuantity += $item['quantity'];
         }
     }
@@ -116,11 +116,6 @@ if (isset($_POST['hapus_semua'])) {
     <section class="carts" id="carts">
         <h2><span>Pesanan</span> Kamu</h2>
         <p>Lihat riwayat pesanan kamu di preloved.you</p>
-
-            <!-- Add a form for deleting all products -->
-        <form method="post" action="keranjang.php">
-            <button type="submit" name="hapus_semua" class="hapus-semua-btn">Batalkan Semua Pesanan</button>
-        </form>
         
         <div class="row">
         <?php
@@ -150,6 +145,11 @@ if (isset($_POST['hapus_semua'])) {
         ?>
 
         </div>
+
+        <!-- Add a form for deleting all products -->
+        <form method="post" action="keranjang.php">
+            <button type="submit" name="hapus_semua" class="hapus-semua-btn">Batalkan Semua Pesanan</button>
+        </form>
     </section>
     <!-- Cart Section end -->
 

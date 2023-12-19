@@ -89,8 +89,8 @@ if (isset($_POST['cancel'])) {
         ?>
 
         <div class="tombol-cart">
-            <a href="produk-kami.php">Kembali</a>
-            <a href="checkout.php">Checkout</a>
+            <a href="produk-kami.php" class="cta">Kembali</a>
+            <a href="checkout.php" class="cta">Checkout</a>
         </div>
     </div>
 
@@ -99,7 +99,6 @@ if (isset($_POST['cancel'])) {
         <div class="isi-footer">
             <a href="index.php">Beranda</a>
             <a href="produk-kami.php">Produk Kami</a>
-            <a href="keranjang.php">Pesananmu</a>
             <a href="kontak-kami.php">Kontak Kami</a>
             <p>Created by Preloved.you's team | &copy 2023</p>
         </div>

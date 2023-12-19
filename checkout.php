@@ -145,7 +145,6 @@ $_SESSION['previous_orders'] = $previousOrders;
         <div class="isi-footer">
             <a href="index.php">Beranda</a>
             <a href="produk-kami.php">Produk Kami</a>
-            <a href="keranjang.php">Pesananmu</a>
             <a href="kontak-kami.php">Kontak Kami</a>
             <p>Created by Preloved.you's team | &copy 2023</p>
         </div>

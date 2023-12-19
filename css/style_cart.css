@@ -35,6 +35,7 @@ h2 {
 .produk-cart {
     display: flex;
     flex-direction: column;
+    margin-top: 3rem;
 }
 
 .row-produk-cart {
@@ -79,8 +80,23 @@ h2 {
 
 .tombol-cart {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    color: var(--primary);
+}
+
+.tombol-cart .cta {
+    margin-top: 1rem;
+    display: inline-block;
+    padding: 1rem 1rem;
+    font-size: 1.1rem;
+    color: #000000;
+    background-color: var(--primary);
+    border-radius: 0.5rem;
+    margin: 1rem;
+}
+
+.tombol-cart .cta:hover {
+    transform: scale(1.1);
 }
 
 footer {
