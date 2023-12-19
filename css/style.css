@@ -1,0 +1,924 @@
+:root {
+    --primary: #a98766;
+    --bg: #ffffff;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg);
+    color: #000000;
+    overflow-x: hidden;
+}
+
+/* Navbar style start */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #ffffff;
+    border-bottom: 0.5px solid #aba1a1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+}
+
+.navbar .logo-navbar {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #000000;
+    font-style: italic;
+    padding-left: 1rem;
+}
+
+.navbar .logo-navbar span {
+    color: var(--primary);
+}
+
+.navbar .isinavbar .list-navbar {
+    display: inline-block;
+    font-size: 1rem;
+    margin: 0 1rem;
+    margin-top: 0.5rem;
+}
+
+.navbar .isinavbar .list-navbar a {
+    color: #000000;
+}
+
+.navbar .list-navbar a:hover {
+    color: var(--primary);
+}
+
+.navbar .list-navbar a::after {
+    content: '';
+    display: block;
+    padding-bottom: 0.5rem;
+    border-bottom: 0.1rem solid var(--primary);
+    transform: scaleX(0);
+    transition: 0.2s linear;
+}
+
+.navbar .list-navbar a:hover::after {
+    transform: scaleX(0.5);
+}
+
+.navbar .navbar-extra {
+    margin: 0 1rem;
+}
+
+.navbar .navbar-extra a {
+    color: #000000;
+    margin: 0 0.5rem;
+}
+
+.navbar .navbar-extra a:hover {
+    color: var(--primary);
+}
+
+#hamburger-menu {
+    display: none;
+}
+
+#shopping-cart-button #icon-cart-span {
+    background-color: red;
+    padding: 1.5px 3px;
+    margin-top: 10px;
+    border-radius: 100%;
+    font-size: 0.9rem;
+    position: absolute;
+}
+
+/* Navbar style end */
+
+/* Navbar search form */
+.navbar .search-form {
+    position: absolute;
+    top: 100%;
+    right: 5%;
+    background-color: #ffffff;
+    width: 30rem;
+    height: 3.5rem;
+    display: flex;
+    align-items: center;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: 0.3s;
+}
+
+.navbar .search-form.active {
+    transform: scaleY(1);
+}
+
+.navbar .search-form input {
+    height: 100%;
+    width: 100%;
+    font-size: 1rem;
+    color: #000000;
+    padding: 1rem;
+}
+
+.navbar .search-form label {
+    cursor: pointer;
+    font-size: 2rem;
+    margin-right: 1.5rem;
+    color: var(--bg);
+}
+
+/* login form start */
+.navbar .login-form {
+    position: absolute;
+    top: 100%;
+    right: 2%;
+    background-color: #ffffff;
+    width: 16rem;
+    height: 10rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transform: scaleY(0); 
+    transform-origin: top;
+    transition: 0.3s;
+    border: 1px solid #ccc;
+}
+
+.navbar .login-form.active {
+    transform: scaleY(1); 
+}
+
+.navbar .login-form h3 {
+    font-size: 1.5rem;
+    text-align: center;
+    margin-top: 0.8rem;
+    margin-bottom: 1rem; 
+}
+
+.navbar .login-form .cta {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    font-size: 1.1rem;
+    color: #ffffff; 
+    background-color: var(--primary);
+    border-radius: 0.5rem;
+    text-decoration: none;
+}
+
+.navbar .login-form .cta:hover {
+    background-color: #876541;
+}
+
+.navbar .login-form p {
+    font-size: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.navbar .login-form a {
+    color: #2B5FA6;
+}
+
+.navbar .login-form a:hover {
+    color: var(--primary);
+}
+
+/* Hero style start */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-top: 1.5rem;
+    z-index: 1;
+}
+
+.hero-img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.hero::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 10%;
+    bottom: 0;
+    background: linear-gradient(0deg, rgba(255, 255, 255, 1)
+                 5%, rgba(255, 255, 255, 0) 40%);
+}
+
+.hero .hero-content {
+    position: flex;
+    padding: 1.5rem 7%;
+    max-width: 55%;
+    padding-top: 4.5rem;
+    z-index: 1;
+}
+
+.hero .hero-content h1 {
+    font-size: 2.8rem;
+    margin-bottom: 0.8rem;
+    color: #4d4646;
+    line-height: 1.3;
+}
+
+.hero .hero-content h1 span {
+    color: var(--primary);
+}
+
+.hero .hero-content p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    line-height: 1.4;
+    color: #887474;
+}
+
+.hero .hero-content .cta {
+    margin-top: 0.8rem;
+    display: inline-block;
+    padding: 1rem;
+    font-size: 1.1rem;
+    color: #000000;
+    background-color: var(--primary);
+    border-radius: 0.5rem;
+}
+
+.hero .hero-content .cta:hover {
+    color: var(--bg);
+    transform: scale(1.1);
+}
+/* Hero style end */
+
+/* About style start */
+#about-content {
+    padding: 6rem 7% 1.4rem;
+}
+
+#about-content h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+}
+
+#about-content h2 span {
+    color: var(--primary);
+}
+
+.home-content .row {
+    display: flex;
+}
+
+.home-content .row .about-img {
+    flex: 1 1 45rem;
+   
+}
+
+.home-content .row .about-img img {
+    width: 85%;
+}
+
+.home-content .row .kenapa-content {
+    flex: 1 1 40rem;
+    padding: 0 1rem;
+}
+
+.home-content .row .kenapa-content h3 {
+    font-size: 1.7rem;
+    margin-bottom: 1rem;
+}
+
+.home-content .row .kenapa-content p {
+    margin-bottom: 0.8rem;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    text-align: justify;
+}
+/* About style end */
+
+/* Modal Box Item Detail start */
+.detail-box {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+}
+
+.detail-box-container {
+    position: relative;
+    background-color: #fefefe;
+    border: 1px solid var(--primary);
+    color: #000000;
+    margin: 15% auto;
+    padding: 1.2rem;
+    width: 80%;
+    height: 18rem;
+    animation: animateModal 0.5s;
+}
+
+@keyframes animateModal {
+    from {
+        top: -300px;
+        opacity: 0;
+    }
+    to {
+        top: 0;
+        opacity: 1;
+    }
+}
+
+.detail-box-container .close-icon {
+    position: absolute;
+    right: 1rem;
+}
+
+.detail-box-container .close-icon:hover, .slider-btn:hover {
+    color: var(--primary);
+}
+
+.detail-content {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.detail-content .deskripsi-produk {
+    font-size: 1.1rem;
+    line-height: 1.8rem;
+    margin-top: 1rem;
+}
+
+.detail-content .produk-price {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.detail-content .konten-produk .masukkan-keranjang {
+    height: 3.5rem;
+    font-size: 0.8rem;
+}
+
+.detail-content .konten-produk .masukkan-keranjang {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    width: 10rem;
+    background-color: var(--primary);
+    color: #000000;
+    margin-top: 1rem;
+    padding: 1rem 1.5rem;
+    border-radius: 0.6rem;
+    height: 3rem;
+}
+
+.detail-content .konten-produk .masukkan-keranjang:hover {
+    background-color: #876541;
+    color: var(--bg);
+}
+
+.slider-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 3rem;
+    width: 60%;
+}
+
+.slider-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.slider-container .slide-img {
+    justify-content: center;
+    width: 70%;
+    display: flex;
+}
+
+.slider-container .slide-img img {
+    max-width: 100%;
+    justify-content: center;
+}
+/* Modal Box Item Detail end */
+
+/* Review content beranda style start */
+.review {
+    padding: 6rem 7% 1.4rem;
+}
+
+.review h2 {
+    text-align: center;
+    font-size: 2.4rem;
+    margin-top: 0.5rem;
+    margin-bottom: 3rem;
+}
+
+.review h2 span {
+    color: var(--primary);
+    font-style: italic;
+}
+
+.review .row-review {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 3rem;
+    justify-content: center;
+}
+
+.review .row-review :hover {
+    transform: scale(1.1);
+}
+
+.review .row-review .review-card {
+    text-align: center;
+    margin: 1rem;
+    padding: 1rem;
+    border: 1px solid var(--primary);
+    border-radius: 0.5rem;
+}
+
+.review .row-review .review-card h3 {
+    font-size: 1.5rem;
+    margin: 1rem auto 0.5rem;
+}
+
+.review .row-review .review-card p {
+    text-align: center;
+    max-width: 15rem;
+    line-height: 1.5;
+}
+/* Review content beranda style end */
+
+/* Footer style start */
+footer {
+    background-color: var(--primary);
+    text-align: center;
+    width: 100%;
+    padding: 0.5rem 0 2rem;
+    margin-top: 15rem;
+    padding: 1.2rem;
+}
+
+footer .sosmed {
+    padding: 0.5rem 0;
+}
+
+footer .sosmed a {
+    font-size: 0.9rem;
+    color: #000000;
+    margin: 0.5rem;
+}
+
+footer .sosmed a:hover {
+    color: var(--bg);
+}
+
+footer .credit {
+    font-size: 1rem;
+    margin-top: 0.5rem;
+    font-weight: 500;
+}
+/* Footer style end */
+
+/* Product style start */
+#all-products, #new-products {
+    padding: 7rem 7% 1.4rem;
+}
+
+#all-products h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+
+#all-products .all-produk-tittle {
+    margin-top: 5rem;
+}
+
+#all-products h2 span, #new-products h2 span {
+    color: var(--primary);
+}
+
+.product .row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+    justify-content: center;
+}
+
+.product .row :hover {
+    transform: scale(1.1);
+}
+
+.produk-terbaru, .list-produk {
+    text-align: center;
+    border: 1px solid #d9cece;
+    border-radius: 0.5rem;
+    padding: 2rem;
+    margin: 1.2rem;
+    padding-bottom: 1rem;
+}
+
+#row-all-product .list-produk img, #row-produk-terbaru .produk-terbaru img {
+    width: 10rem;
+    height: 10rem;
+    border-radius: 0.2rem;
+}
+
+#row-all-product .list-produk .produk-tittle, #row-produk-terbaru .produk-terbaru .produk-tittle {
+    font-size: 1.2rem;
+    margin: 0.5rem auto;
+}
+
+#row-all-product .list-produk .produk-price, #row-produk-terbaru .produk-terbaru .produk-price {
+    font-size: 1rem;
+    margin: 0.5rem auto;
+}
+
+.product .row .list-produk .produk-button {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    font-size: 0.5rem;
+    min-height: 1rem;
+    margin-top: 0.8rem;
+}
+
+.product .row .list-produk .produk-button .masukkan-keranjang,
+.product .row .list-produk .produk-button .detail-produk {
+    flex: 1;
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    margin: 0 5px;
+    background-color: var(--primary);
+    padding: 0.5rem;
+    font-size: 0.7rem;
+    color: #000000;
+    border-radius: 0.5rem;
+    box-sizing: border-box;
+    height: 2.5rem;
+}
+
+/* Product style end */
+
+/* Pesanan style start */
+.carts {
+    padding: 7rem 7% 1.4rem;
+}
+
+.carts h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+
+.carts h2 span {
+    color: var(--primary);
+}
+
+.carts p {
+    text-align: center;
+    font-size: 1rem;
+    max-width: 30rem;
+    margin: auto;
+    line-height: 1.5;
+}
+
+.carts .row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+    justify-content: center;
+}
+
+.carts .row .list-carts {
+    text-align: center;
+    border: 1px solid #d9cece;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    margin: 1.5rem;
+}
+
+.carts .row .list-carts img {
+    width: 14rem;
+    height: 14rem;
+    border-radius: 0.2rem;
+}
+
+.carts .row .list-carts h3 {
+    font-size: 1.2rem;
+    margin: 1rem auto 0.5rem;
+}
+
+.carts .row .list-carts .produk-price {
+    font-size: 1rem;
+    margin: 0.8rem auto 0.5rem;
+}
+
+.carts .row .list-carts .produk-status {
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+    font-style: italic;
+}
+/* Pesanan style end */
+
+/* Contact style start */
+.contact {
+    padding: 7rem 7% 1.4rem;
+}
+
+.contact h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.contact h2 span {
+    color: var(--primary);
+}
+
+.contact p {
+    text-align: center;
+    font-size: 1rem;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    line-height: 1.5;
+    justify-content: center;
+}
+
+.contact .row-contact {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.contact .row-contact .cta {
+    margin-top: 1rem;
+    display: inline-block;
+    padding: 1rem 1rem;
+    font-size: 1.1rem;
+    color: #000000;
+    background-color: var(--primary);
+    border-radius: 0.5rem;
+    box-shadow: 1px 1px 2px rgba(255, 255, 255, 0.5);
+    margin: 1rem;
+}
+
+.contact .row-contact :hover {
+    transform: scale(1.1);
+    color: #ffffff;
+}
+
+.contact .row-alamat-saran {
+    display: flex;
+    margin-top: 4rem;
+}
+
+.contact .row-alamat, .row-kritik-saran {
+    flex: 1 1 45rem;
+    padding: 0 1rem;
+    /*border: 1px solid #000000;*/
+}
+
+.contact .row-alamat-saran .row-alamat h3, .row-kritik-saran h3 {
+    text-align: left;
+    margin-bottom: 0.8rem;
+    padding-left: 0.5rem;
+    text-decoration: underline;
+}
+
+.contact .row-alamat-saran .row-alamat p {
+    font-family: 'Arial';
+    text-align: left;
+    font-size: 1rem;
+    padding-left: 0.5rem;
+}
+
+.contact .row-alamat-saran .row-alamat .telp a {
+    color: #2B5FA6;
+}
+
+.contact .row-alamat-saran .row-alamat .map {
+    flex: 1 1 45rem;
+    width: 100%;
+    object-fit: cover;
+    padding: 0.5rem 0.5rem;
+}
+
+.contact .row-alamat-saran .row-kritik-saran form {
+    flex: 1 1 45rem;
+    padding: 0.5rem 0.5rem;
+    text-align: center;
+}
+
+.contact .row-alamat-saran .row-kritik-saran .input-group {
+    display: flex;
+    align-items: center;
+    margin-top: 0.5rem;
+    background-color: #e7e2e2;
+    border: 1px solid var(--primary);
+    padding-left: 0.5rem;
+}
+
+.contact .row-alamat-saran .row-kritik-saran .input-group input {
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 1rem;
+    background: none;
+    color: #000000;
+}
+
+.contact .row-alamat-saran .row-kritik-saran .input-group textarea {
+    width: 85%;
+    padding: 0.5rem;
+    font-size: 1rem;
+    background: none;
+    color: #000000;
+}
+
+.contact .row-alamat-saran .row-kritik-saran .submit-button {
+    margin: 1rem;
+    display: flex;
+    justify-content: left;
+    margin-left: 0.5rem;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    color: #000000;
+    background-color: var(--primary);
+    cursor: pointer;
+    border-radius: 0.5rem;
+}
+
+.contact .row-alamat-saran .row-kritik-saran .submit-button:hover {
+    transform: scale(1.1);
+    color: #ffffff;
+}
+
+/* Contact style end */
+
+/* laptop */
+@media (max-width: 1366px) {
+    html {
+        font-size: 100%;
+    }
+}
+
+/* tablet */
+@media (max-width: 768px) {
+    html {
+        font-size: 70%;
+    }
+
+    body {
+        overflow-x: hidden;
+        min-height: 70vh auto;
+    }
+
+    #hamburger-menu {
+        display: inline-block;
+    }
+
+    .navbar .isinavbar {
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        background-color: var(--bg);
+        border: var(--primary);
+        width: 16rem;
+        height: 100vh;
+        transition: 0.3s;
+        padding: 1rem;
+    }
+
+    .navbar .isinavbar.active {
+        right: 0;
+    }
+
+    .navbar .isinavbar a {
+        color: var(--bg);
+        display: block;
+        margin: 0.7rem;
+        padding: 0.5rem;
+        font-size: 1.3rem;
+    }
+
+    .navbar .isinavbar a::after {
+        transform-origin: 0 0;
+    }
+
+    .navbar .isinavbar a:hover::after {
+        transform: scaleX(0.7);
+    }
+
+    .navbar .search-form {
+        width: 90%;
+        right: 2rem;
+    }
+
+    .hero .hero-content {
+        max-width: 55%;
+    }
+
+    .hero .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero .hero-content p {
+        font-size: 1rem;
+        text-align: justify;
+    }
+
+    #about-content .row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    #about-content .row .about-img {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    #about-content .row .about-img img {
+        height: 22rem;
+        object-fit: cover;
+        object-position: center;
+    }
+    
+    #about-content .row .kenapa-content {
+        margin-top: 2rem;
+        padding: 0;
+        text-align: center;
+        max-width: 85%;
+    }
+    
+    #about-content .row .kenapa-content h3 {
+        margin-top: 1rem;
+        font-size: 1.8rem;
+    }
+    
+    #about-content .row .kenapa-content p {
+        font-size: 1.3rem;
+        text-align: justify;
+    }
+
+    .contact .row-alamat-saran {
+        flex-wrap: wrap;
+    }
+
+    .contact .row-alamat-saran .row-alamat map {
+        height: 30rem;
+    }
+
+    .contact .row-alamat-saran .row-kritik-saran {
+        padding-top: 0;
+        margin-top: 2rem;
+    }
+}
+
+    /* mobile phone */
+    @media (max-width: 450px) {
+        html {
+            font-size: 55%;
+        }
+
+        body {
+            overflow-x: hidden;
+        }
+
+        section {
+            min-height: 70vh auto;
+        }
+}

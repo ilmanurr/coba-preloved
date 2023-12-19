@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preloved-You</title>
+    <link rel="icon" href="image/Preloved-logo-png.png">
+
+    <!-- font style -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,700;1,700&display=swap" rel="stylesheet">
+
+    <!-- my style-->
+    <link rel="stylesheet" href="css/style_login_signup.css">
+</head>
+
+<body>
+    <!-- Registration Section start -->
+    <section id="sign-up" class="sign-up">
+        <h2>Preloved.you</h2>
+        <div class="group">
+            <h3>Daftar</h3>
+            <form id="signupForm" method="post" action="registrasi_akun.php">
+                <div class="input-group">
+                    <input type="text" id="signupUsername" name="username" placeholder="Username" required>
+                </div>
+                <div class="input-group">
+                    <input type="text" id="signupNama" name="nama" placeholder="Nama" required>
+                </div>
+                <div class="input-group">
+                    <input type="text" id="signupNoHp" name="noHp" placeholder="No. Hp" required>
+                </div>
+                <div class="input-group">
+                    <input type="text" id="signupEmail" name="email" placeholder="E-mail" required>
+                </div>
+                <div class="input-group">
+                    <input type="password" id="signupPassword" name="password" placeholder="Password" required>
+                </div>
+                <div class="input-group-jk">
+                    <label for="jenis_kelamin">Jenis Kelamin</label>
+                    <select name="jenis_kelamin" id="signupJenisKelamin" required>
+                        <option value="" disabled selected>Pilih</option>
+                        <option value="laki-laki">Laki-laki</option>
+                        <option value="perempuan">Perempuan</option>
+                        <option value="lainnya">Lainnya...</option>
+                    </select>
+                </div>
+                <button type="submit" class="submit-button">Sign Up</button>
+            </form>
+            <p>Sudah punya akun? <a href="login.html">Log In</a></p>
+        </div>
+    </section>
+    <!-- Registration Section end -->
+
+    <!-- Footer start -->
+    <footer>
+        <div class="isi-footer">
+            <a href="index.php">Beranda</a>
+            <a href="produk-kami.php">Produk Kami</a>
+            <a href="keranjang.php">Pesananmu</a>
+            <a href="kontak-kami.php">Kontak Kami</a>
+            <p>Created by Preloved.you's team | &copy 2023</p>
+        </div>
+    </footer>
+    <!-- Footer end -->
+
+</body>
+</html>

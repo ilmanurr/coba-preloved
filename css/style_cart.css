@@ -1,0 +1,112 @@
+:root {
+    --primary: #a98766;
+    --bg: #ffffff;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.shopping-cart {
+    width: 80%;
+    margin: 0 auto;
+}
+
+h2 {
+    margin-top: 3rem;
+    text-align: center;
+}
+
+.produk-cart {
+    display: flex;
+    flex-direction: column;
+}
+
+.row-produk-cart {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    gap: 5rem;
+}
+
+.row-produk-cart img {
+    width: 10rem; /* Mengurangi lebar gambar sesuai kebutuhan */
+    margin-right: 5px;
+    height: auto;
+}
+
+.nama-produk,
+.harga-produk {
+    margin-right: 2px;
+}
+
+.jumlah-produk span {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: #000000;
+    color: var(--bg);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.jumlah-produk span:nth-child(2) {
+    background-color: transparent;
+    color: #000000;
+    cursor: auto;
+}
+
+.tombol-cart {
+    display: flex;
+    justify-content: center;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Menengahkan footer secara vertikal */
+    background-color: var(--bg); /* Menambahkan latar belakang agar footer terlihat */
+    height: 100px; /* Atur tinggi footer sesuai kebutuhan */
+}
+
+footer .isi-footer {
+    padding: 10px;
+    text-align: center;
+    margin-top: auto;
+}
+
+.isi-footer {
+    justify-content: space-between;
+    margin: 1rem;
+}
+
+.isi-footer p {
+    margin: 0;
+}
+
+.isi-footer a {
+    text-decoration: none;
+    color: var(--primary);
+    margin: 1rem;
+}
+
+.isi-footer a:hover {
+    color: #867a7a;
+}
+
