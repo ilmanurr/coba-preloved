@@ -72,9 +72,15 @@ h2 {
     cursor: auto;
 }
 
+.total-harga {
+    text-align: center;
+    margin: 3rem 0; /* Adjust the margin-top and margin-bottom values as needed */
+}
+
 .tombol-cart {
     display: flex;
     justify-content: center;
+    color: var(--primary);
 }
 
 footer {
