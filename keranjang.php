@@ -116,6 +116,11 @@ if (isset($_POST['hapus_semua'])) {
     <section class="carts" id="carts">
         <h2><span>Pesanan</span> Kamu</h2>
         <p>Lihat riwayat pesanan kamu di preloved.you</p>
+
+            <!-- Add a form for deleting all products -->
+        <form method="post" action="keranjang.php">
+            <button type="submit" name="hapus_semua" class="hapus-semua-btn">Batalkan Semua Pesanan</button>
+        </form>
         
         <div class="row">
         <?php
@@ -145,11 +150,6 @@ if (isset($_POST['hapus_semua'])) {
         ?>
 
         </div>
-
-        <!-- Add a form for deleting all products -->
-        <form method="post" action="keranjang.php">
-            <button type="submit" name="hapus_semua" class="hapus-semua-btn">Batalkan Semua Pesanan</button>
-        </form>
     </section>
     <!-- Cart Section end -->
 
