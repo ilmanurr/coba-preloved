@@ -2,9 +2,9 @@
     include_once 'register.php';
     $re = new Register();
 
-    if (isset($_GET ['delStd'])) {
-        $id = base64_decode($_GET['delStd']);
-        $deleteStudent = $re->delStudent($id);
+    if (isset($_GET ['delProduk'])) {
+        $id = base64_decode($_GET['delProduk']);
+        $deleteProduk = $re->delProduk($id);
     }   
 ?>
 
@@ -28,10 +28,10 @@
                 <div class="card shadow">
 
                 <?php 
-                    if (isset($deleteStudent)) {
+                    if (isset($deleteProduk)) {
                         ?>
                             <div class="alert alert-warning alert-dismissible fade show" role="alert">
-                            <strong><?=$deleteStudent?></strong>
+                            <strong><?=$deleteProduk?></strong>
                             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button>
@@ -59,7 +59,7 @@
                                 <th>Aksi</th>
                             </tr>
                             <?php
-                                $allStd = $re->allStudent();
+                                $allStd = $re->allProduk();
                                 if ($allStd) {
                                     while ($row = mysqli_fetch_assoc($allStd)) {
                                         ?>

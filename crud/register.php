@@ -10,11 +10,11 @@
             $this->db = new Database();
         }
 
-        public function addRegister($data, $file){
+        public function addProduk($data, $file){
             $name = $data['nama_produk'];
             $harga_satuan = $data['harga_satuan'];
 
-            $permited = array('jpg', 'jpeg', 'img', 'png', 'pdf');
+            $permited = array('jpg', 'jpeg', 'img', 'png');
             $file_name = $file['foto']['name'];
             $file_size = $file['foto']['size'];
             $file_temp = $file['foto']['tmp_name'];
@@ -41,33 +41,33 @@
                 $result = $this->db->tambah_data($query);
 
                 if ($result) {
-                    $msg = "Registrasi Berhasil!";
+                    $msg = "Data Produk Berhasil Ditambahkan!";
                     return $msg;
                 }else {
-                    $msg = "Maaf, Registrasi Anda Gagal!";
+                    $msg = "Maaf, Gagal Menambahkan Data Produk!";
                     return $msg;
                 }
             }
         }
 
-        public function allStudent(){
+        public function allProduk(){
             $query = "SELECT * FROM produk ORDER BY id DESC";
             $result = $this->db->pilih_data($query);
             return $result;
         }
 
-        public function getStdById($id){
+        public function getProdukById($id){
             $query = "SELECT * FROM produk WHERE id = '$id'";
             $result = $this->db->pilih_data($query);
             return $result;
         }
 
         // update
-        public function updateStudent($data, $file, $id) {
+        public function updateProduk($data, $file, $id) {
             $name = $data['nama_produk'];
             $harga_satuan = $data['harga_satuan'];
 
-            $permited = array('jpg', 'jpeg', 'img', 'png', 'pdf');
+            $permited = array('jpg', 'jpeg', 'img', 'png');
             $file_name = $file['foto']['name'];
             $file_size = $file['foto']['size'];
             $file_temp = $file['foto']['tmp_name'];
@@ -104,10 +104,10 @@
                     $result = $this->db->tambah_data($query);
 
                     if ($result) {
-                        $msg = "Update Data Siswa Berhasil!";
+                        $msg = "Update Data Produk Berhasil!";
                         return $msg;
                     } else {
-                        $msg = "Maaf, Update Data Siswa Gagal!";
+                        $msg = "Maaf, Update Data Produk Gagal!";
                         return $msg;
                     }
                 }
@@ -117,17 +117,17 @@
                 $result = $this->db->tambah_data($query);
 
                 if ($result) {
-                    $msg = "Update Data Siswa Berhasil!";
+                    $msg = "Update Data Produk Berhasil!";
                     return $msg;
                 } else {
-                    $msg = "Maaf, Update Data Siswa Gagal!";
+                    $msg = "Maaf, Update Data Produk Gagal!";
                     return $msg;
                 }
             }
         }
 
         // delete
-        public function delStudent($id){
+        public function delProduk($id){
             $img_query = "SELECT * FROM produk WHERE id = '$id'";
             $img_res = $this->db->pilih_data($img_query);
             if ($img_res) {
@@ -140,10 +140,10 @@
             $delete_query = "DELETE FROM produk WHERE id = '$id'";
             $delete = $this->db->hapus_data($delete_query);
             if ($delete) {
-                $msg = "Berhasil Menghapus Data Siswa!";
+                $msg = "Berhasil Menghapus Data Produk!";
                 return $msg;
             } else {
-                $msg = "Gagal Menghapus Data Siswa!";
+                $msg = "Gagal Menghapus Data Produk!";
                 return $msg;
             }
         }

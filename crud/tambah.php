@@ -3,7 +3,7 @@
     $re = new Register();
 
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-        $register = $re->addRegister($_POST, $_FILES);
+        $register = $re->addProduk($_POST, $_FILES);
     }
     
 ?>

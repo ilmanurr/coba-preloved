@@ -7,7 +7,7 @@
     }
 
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-        $register = $re->updateStudent($_POST, $_FILES, $id);
+        $register = $re->updateProduk($_POST, $_FILES, $id);
     }
     
 ?>
@@ -54,7 +54,7 @@
                     </div>
                     <div class="card-body">
                         <?php
-                            $getStd = $re->getStdById($id);
+                            $getStd = $re->getProdukById($id);
                             if ($getStd) {
                                 while($row = mysqli_fetch_assoc($getStd)) {
                                         ?>
