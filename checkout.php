@@ -140,9 +140,6 @@ $_SESSION['previous_orders'] = $previousOrders;
         </div>
     </footer>
     <!-- Footer end -->
-
-    <!-- my script -->
-    <script src="js/script_checkout.js"></script>
 </body>
 
 </html>

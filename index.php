@@ -176,7 +176,6 @@ function getTotalCartQuantity() {
 
     <!-- my js script -->
     <script src="js/script.js"></script>
-    <script src="js/script_checkout.js"></script>
 </body>
 
 </html>
