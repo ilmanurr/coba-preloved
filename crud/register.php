@@ -36,7 +36,8 @@
             }else{
                 move_uploaded_file($file_temp, $upload_image);
 
-                $query = "INSERT INTO `produk`(`nama_produk`, `harga_satuan`, `foto`) VALUES ('$name', '$harga_satuan', '$upload_image')";
+                $query = "INSERT INTO `produk`(`nama_produk`, `harga_satuan`, `foto`) 
+                        VALUES ('$name', '$harga_satuan', '$upload_image')";
             
                 $result = $this->db->tambah_data($query);
 
@@ -99,7 +100,8 @@
 
                     move_uploaded_file($file_temp, $upload_image);
 
-                    $query = "UPDATE produk SET nama_produk='$name', harga_satuan='$harga_satuan', foto='$upload_image' WHERE id = '$id'";
+                    $query = "UPDATE produk SET nama_produk='$name', harga_satuan='$harga_satuan', 
+                            foto='$upload_image' WHERE id = '$id'";
 
                     $result = $this->db->tambah_data($query);
 
