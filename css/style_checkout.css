@@ -40,7 +40,6 @@ body {
 .row {
     width: 80%;
     display: flex;
-
 }
 
 .row-alamat-produk {
@@ -48,8 +47,6 @@ body {
 }
 
 .row-kurir-pembayaran {
-    width: 30%;
-    margin-top: 1rem;
     margin-left: 1.5rem;
     padding-left: 4rem;
 }
@@ -63,11 +60,13 @@ body {
 }
 
 .alamat input,
-.alamat textarea {
+.alamat textarea,
+.input-nohp input,
+.pilih-pembayaran input {
     width: 100%;
     height: 2rem;
     border: 1px solid var(--primary);
-    margin-top: 1rem;
+    margin-bottom: 1rem;
     padding: 0.5rem;
 }
 
@@ -80,77 +79,53 @@ body {
     border: 1px solid var(--primary);
 }
 
-.produk-dipilih .row-produk-dipilih {
+.produk-dipilih .row-produk-dipilih .produk-checkout {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     text-align: center;
     width: 80%;
 }
 
-.produk-dipilih img {
+.produk-checkout img {
     max-width: 80px;
     height: auto;
+    margin-right: 1rem;
+    margin-left: 2rem;
 }
 
-.produk-dipilih .nama-produk {
+.produk-checkout .nama-produk {
     flex-grow: 1;
-    margin-right: 2.5rem;
-    margin-left: 2rem;
     width: 12rem;
-}
-
-.produk-dipilih .harga-produk {
     margin-left: 1rem;
-    width: 5rem;
 }
 
-.jumlah-produk {
-    width: 3rem;
+.produk-checkout .harga-produk {
+    width: 5rem;
     margin-left: 2rem;
+}
+
+.produk-checkout .jumlah-produk {
+    width: 3rem;
+    margin-left: 3rem;
     font-weight: 550;
 }
 
-.pilih-kota,
-.pilih-kurir,
 .ringkasan-belanja,
 .total-belanja {
     margin-bottom: 1rem;
 }
 
-.pilih-kurir p,
+.input-nohp p,
 .pilih-pembayaran p,
 .total-belanja p,
 .pilih-kota p {
     font-weight: 550;
-    margin-bottom: 0.5rem;
-}
-
-.pilih-kurir select,
-.pilih-pembayaran select,
-.pilih-kota select {
-    border: 1px solid var(--primary);
-    height: 2.3rem;
-    padding-left: 1rem;
-    background-color: var(--primary);
-    border-radius: 0.7rem;
-    width: 19rem;
-    font-size: 1.05rem;
-    font-weight: 510;
-    color: var(--bg);
-}
-
-.pilih-kurir option,
-.pilih-pembayaran option,
-.pilih-kota option {
-    background-color: #ffffff;
-    color: #000000;
 }
 
 .ringkasan-belanja {
     border: 1px solid var(--primary);
     padding: 1rem 0.5rem 1rem 0.5rem;
-    width: 75%;
 }
 
 .ringkasan-belanja .row-belanja {
@@ -171,7 +146,6 @@ body {
 .total-belanja {
     display: flex;
     justify-content: space-between;
-    width: 73%;
 }
 
 .total-belanja .harga {
@@ -183,7 +157,7 @@ body {
     border: 1px solid var(--primary);
     background-color: var(--primary);
     border-radius: 0.7rem;
-    width: 19rem;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -202,7 +176,7 @@ body {
 footer .isi-footer {
     padding: 10px;
     text-align: center;
-    margin-top: auto;
+    margin-top: 5rem;
 }
 
 .isi-footer {

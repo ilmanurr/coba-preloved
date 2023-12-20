@@ -1,17 +1,25 @@
 <?php
 session_start();
 
-// Simpan data produk ke dalam session
-$_SESSION['checkout_products'] = $_SESSION['shopping_cart'];
-
-// Check if the cancel button is clicked
-if (isset($_POST['cancel'])) {
-    // Perform actions when the cancel button is clicked
-    // For example, clear the current order from the session
-    unset($_SESSION['checkout_products']);
-    header("Location: shopping-cart.php"); // Redirect to the same page to refresh the content
-    exit();
+// Check if the user is logged in
+if (isset($_SESSION['username'])) {
+    $loggedInUsername = $_SESSION['username'];
 }
+
+// Check if 'shopping_cart' is set in the session
+if (isset($_SESSION['shopping_cart'])) {
+    // Simpan data produk ke dalam session
+    $_SESSION['checkout_products'] = $_SESSION['shopping_cart'];
+
+    // Check if the cancel button is clicked
+    if (isset($_POST['cancel'])) {
+        // Perform actions when the cancel button is clicked
+        // For example, clear the current order from the session
+        unset($_SESSION['checkout_products']);
+        header("Location: shopping-cart.php"); // Redirect to the same page to refresh the content
+        exit();
+    }
+} 
 ?>
 
 <!DOCTYPE html>
@@ -99,7 +107,6 @@ if (isset($_POST['cancel'])) {
         <div class="isi-footer">
             <a href="index.php">Beranda</a>
             <a href="produk-kami.php">Produk Kami</a>
-            <a href="keranjang.php">Pesananmu</a>
             <a href="kontak-kami.php">Kontak Kami</a>
             <p>Created by Preloved.you's team | &copy 2023</p>
         </div>

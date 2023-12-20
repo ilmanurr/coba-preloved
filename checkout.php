@@ -100,21 +100,11 @@ $_SESSION['previous_orders'] = $previousOrders;
                     </div>
                     <div class="row-kurir-pembayaran">
                         <div class="input-nohp">
+                            <p>Masukkan No. HP</p>
                             <input type="text" placeholder="Masukkan No. HP yang aktif" name="no_hp">
                         </div>
                         <div class="pilih-pembayaran">
-                            <p>Pilih Pembayaran</p>
-                            <select name="pembayaran" id="pembayaran">
-                                <?php
-                                // Loop untuk menampilkan pilihan jenis pembayaran
-                                $pembayaranOptions = array('COD', 'BNI', 'Mandiri', 'BCA', 'BRI');
-
-                                foreach ($pembayaranOptions as $pembayaran) {
-                                    $selected = ($pembayaran == $jenisPembayaran) ? 'selected' : '';
-                                    echo "<option value=\"$pembayaran\" $selected>$pembayaran</option>";
-                                }
-                                ?>
-                            </select>
+                            <p>Masukkan Metode Pembayaran</p>
                             <input type="text" placeholder="Jenis Pembayaran" name="jenis_pembayaran">
                         </div>
                         <div class="ringkasan-belanja">
@@ -133,7 +123,7 @@ $_SESSION['previous_orders'] = $previousOrders;
                             <p class="harga">Rp <?= number_format($totalHarga + $hargaOngkir, 0, ',', '.')?></p>
                         </div>
                         <div>
-                        <button type="submit">Bayar</button>
+                        <button type="submit" class="button-bayar">Bayar</button>
                         </div> 
                 </form>
                 </div>

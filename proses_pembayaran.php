@@ -24,9 +24,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_SESSION['username'])) {
 
     $hargaOngkir = 15000;
 
-    // Initialize or retrieve $hargaOngkir based on your logic
-    $hargaOngkir = 15000; // Replace with your calculation or retrieval logic
-
     // Calculate the total harga including ongkir
     $totalBelanja = $totalHarga + $hargaOngkir;
 

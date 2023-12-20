@@ -119,7 +119,7 @@ function getTotalCartQuantity() {
             <div class="kenapa-content">
                 <h3>Kenapa harus Preloved.you ?</h3>
                 <p>Preloved.you merupakan destinasi tempat belanja baju preloved terbaik untuk kamu, Kamu dapat menemukan pakaian bermerk atau
-        berkualitas tinggi tanpa harus menguras dompet. Serta kamu dapat berkontribusi dalam mengurangi limbah tekstil dan jejak karbon produksi pakaian baru.</p>
+                    berkualitas tinggi tanpa harus menguras dompet. Serta kamu dapat berkontribusi dalam mengurangi limbah tekstil dan jejak karbon produksi pakaian baru.</p>
             </div>
         </div>
     </section>

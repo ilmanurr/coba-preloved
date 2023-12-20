@@ -146,6 +146,7 @@ footer .isi-footer {
 .isi-footer a, .footer-signup a {
     text-decoration: none;
     color: var(--primary);
+    padding: 1rem;
 }
 
 .isi-footer a:hover, .footer-signup a:hover {

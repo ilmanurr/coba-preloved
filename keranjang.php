@@ -117,7 +117,7 @@ if (isset($_POST['hapus_semua'])) {
         <h2><span>Pesanan</span> Kamu</h2>
         <p>Lihat riwayat pesanan kamu di preloved.you</p>
 
-            <!-- Add a form for deleting all products -->
+        <!-- Add a form for deleting all products -->
         <form method="post" action="keranjang.php">
             <button type="submit" name="hapus_semua" class="hapus-semua-btn">Batalkan Semua Pesanan</button>
         </form>
@@ -135,14 +135,13 @@ if (isset($_POST['hapus_semua'])) {
                 echo '<p class="price">Rp ' . number_format($item['price'], 0, ',', '.') . '</p>';
                 echo '<p class="quantity">Jumlah: ' . $item['quantity'] . '</p>';
                 echo '<br>';
+                echo '<div class="order-summary">';
+                echo '<p>Total Ongkos Kirim</p>';
+                echo '<p class="harga">Rp ' . number_format($order['hargaOngkir'], 0, ',', '.') . '</p>';
+                echo '<p>Total Belanja</p>';
+                echo '<p class="harga">Rp ' . number_format($order['totalHarga'] + $order['hargaOngkir'], 0, ',', '.') . '</p>';
+                echo '</div>';
             }
-
-            echo '<div class="order-summary">';
-            echo '<p>Total Ongkos Kirim</p>';
-            echo '<p class="harga">Rp ' . number_format($order['hargaOngkir'], 0, ',', '.') . '</p>';
-            echo '<p>Total Belanja</p>';
-            echo '<p class="harga">Rp ' . number_format($order['totalHarga'] + $order['hargaOngkir'], 0, ',', '.') . '</p>';
-            echo '</div>';
 
             echo '</div>';
             echo '</div>';
