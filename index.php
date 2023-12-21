@@ -34,7 +34,8 @@ function getTotalCartQuantity() {
     <!-- font style -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,700;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,700;1,700&display=swap" 
+    rel="stylesheet">
 
     <!-- feather icons -->
     <script src="https://unpkg.com/feather-icons"></script>
@@ -67,7 +68,8 @@ function getTotalCartQuantity() {
         <!-- icon navbar -->
         <div class="navbar-extra">
             <a href="#" id="search-button"><i data-feather="search"></i></a>
-            <a href="shopping-cart.php" id="shopping-cart-button"><i data-feather="shopping-cart"></i><span id="icon-cart-span"><?php echo getTotalCartQuantity(); ?></span></a>
+            <a href="shopping-cart.php" id="shopping-cart-button"><i data-feather="shopping-cart"></i>
+                <span id="icon-cart-span"><?php echo getTotalCartQuantity(); ?></span></a>
             <a href="registration.html" id="profil-menu"><i data-feather="user"></i></a>
             <a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
         </div>
@@ -103,7 +105,8 @@ function getTotalCartQuantity() {
         <img src="image/hero5-gif.gif" alt="gambar hero" class="hero-img">
         <div class="hero-content">
             <h1>Temukan baju <span>preloved-mu</span> disini!</h1>
-            <p>kualitas terbaik, harga terjangkau, perhatian pada lingkungan, pilihan gaya yang beragam, dan pengalaman berbelanja yang menyenangkan!</p>
+            <p>kualitas terbaik, harga terjangkau, perhatian pada lingkungan, 
+                pilihan gaya yang beragam, dan pengalaman berbelanja yang menyenangkan!</p>
             <a href="produk-kami.php" class="cta">Beli Sekarang</a>
         </div>
     </section>
@@ -118,8 +121,9 @@ function getTotalCartQuantity() {
             </div>
             <div class="kenapa-content">
                 <h3>Kenapa harus Preloved.you ?</h3>
-                <p>Preloved.you merupakan destinasi tempat belanja baju preloved terbaik untuk kamu, Kamu dapat menemukan pakaian bermerk atau
-                    berkualitas tinggi tanpa harus menguras dompet. Serta kamu dapat berkontribusi dalam mengurangi limbah tekstil dan jejak karbon produksi pakaian baru.</p>
+                <p>Preloved.you merupakan destinasi tempat belanja baju preloved terbaik untuk kamu, Kamu dapat menemukan 
+                    pakaian bermerk atau berkualitas tinggi tanpa harus menguras dompet. Serta kamu dapat berkontribusi 
+                    dalam mengurangi limbah tekstil dan jejak karbon produksi pakaian baru.</p>
             </div>
         </div>
     </section>
@@ -132,23 +136,28 @@ function getTotalCartQuantity() {
         <div class="row-review" id="row-review">
             <div class="review-card">
                 <h3>Nabila</h3>
-                <p>"Makasih, Preloved.you! Aku seneng banget belanja di sini. Banyak pakaian preloved yang cantik banget, dan harganya juga masih oke. Kualitasnya juara!"</p>
+                <p>"Makasih, Preloved.you! Aku seneng banget belanja di sini. 
+                    Banyak pakaian preloved yang cantik banget, dan harganya juga masih oke. Kualitasnya juara!"</p>
             </div>
             <div class="review-card">
                 <h3>Alex</h3>
-                <p>"Gue suka banget Preloved.you, banyak baju branded yang terjangkau tapi kualitasnya ga main-main. Websitenya juga simpel banget."</p>
+                <p>"Gue suka banget Preloved.you, banyak baju branded yang terjangkau tapi kualitasnya ga main-main. 
+                    Websitenya juga simpel banget."</p>
             </div>
             <div class="review-card">
                 <h3>Sania</h3>
-                <p>"Bakalan jadi langganan aku banget! mau belanja jadi ga ribet dan ga cape. Banyak pilihannya dan ga susah buat pesen!"</p>
+                <p>"Bakalan jadi langganan aku banget! mau belanja jadi ga ribet dan ga cape. 
+                    Banyak pilihannya dan ga susah buat pesen!"</p>
             </div>
             <div class="review-card">
                 <h3>Gladis</h3>
-                <p>"Jatuh cinta sama Preloved.you!, Banyak pilihan dan harganya masih bisa dicicipin. Plus, gw ngerasa gw nolong bumi juga pas belanja di sini.".</p>
+                <p>"Jatuh cinta sama Preloved.you!, Banyak pilihan dan harganya masih bisa dicicipin. 
+                    Plus, gw ngerasa gw nolong bumi juga pas belanja di sini.".</p>
             </div>
             <div class="review-card">
                 <h3>Hans</h3>
-                <p>"Preloved.you itu praktis banget buat belanja. Gue tinggal klik sana-sini, langsung nemu baju yang oke buat gue. Gak ribet sama sekali!"</p>
+                <p>"Preloved.you itu praktis banget buat belanja. Gue tinggal klik sana-sini, 
+                    langsung nemu baju yang oke buat gue. Gak ribet sama sekali!"</p>
             </div>
         </div>
     </section>

@@ -51,8 +51,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_SESSION['username'])) {
     
     $statusPemesanan = "Menunggu Konfirmasi";
     // Query untuk menyimpan data ke tabel pemesanan
-    $sqlInsertPemesanan = "INSERT INTO pemesanan (username, nama, alamat, no_hp, jenis_pembayaran, total_harga, harga_ongkir, total_belanja, status_pemesanan)
-            VALUES ('$username', '$namaPenerima', '$alamatPenerima', '$noHp', '$jenisPembayaran', $totalHarga, $hargaOngkir, $totalBelanja, '$statusPemesanan')";
+    $sqlInsertPemesanan = "INSERT INTO pemesanan (username, nama, alamat, no_hp, jenis_pembayaran, 
+                        total_harga, harga_ongkir, total_belanja, status_pemesanan) VALUES ('$username', '$namaPenerima', 
+                        '$alamatPenerima', '$noHp', '$jenisPembayaran', $totalHarga, $hargaOngkir, $totalBelanja, '$statusPemesanan')";
 
     if ($conn->query($sqlInsertPemesanan) === TRUE) {
         // Get the generated order ID

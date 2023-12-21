@@ -60,7 +60,7 @@ itemDetailButtons.forEach((btn, index) => {
     };
 });
 
-// Ketika diklik tombol close
+// Ketika diklik tombol close di modal box
 document.querySelectorAll('.close-icon').forEach((closeIcon) => {
     closeIcon.onclick = (e) => {
         const itemDetailBoxes = document.querySelectorAll('.detail-box');
@@ -71,7 +71,7 @@ document.querySelectorAll('.close-icon').forEach((closeIcon) => {
     };
 });
 
-// Ketika klik di luar modal
+// Ketika klik di luar modal box
 window.onclick = (e) => {
     const itemDetailBoxes = document.querySelectorAll('.detail-box');
     itemDetailBoxes.forEach((box) => {

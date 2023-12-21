@@ -22,7 +22,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $jenisKelamin = $_POST["jenis_kelamin"];
 
     // Perform SQL query to insert data into the table
-    $sql = "INSERT INTO registrasi (username, nama, noHp, email, password, jenis_kelamin) VALUES ('$username', '$nama', '$noHp', '$email', '$password', '$jenisKelamin')";
+    $sql = "INSERT INTO registrasi (username, nama, noHp, email, password, jenis_kelamin) 
+            VALUES ('$username', '$nama', '$noHp', '$email', '$password', '$jenisKelamin')";
 
     if ($conn->query($sql) === TRUE) {
         echo "New record created successfully";

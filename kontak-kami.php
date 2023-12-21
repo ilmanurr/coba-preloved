@@ -114,7 +114,10 @@ function getTotalCartQuantity() {
                 <h3>Alamat Kami</h3>
                 <p>Jl. Ketintang, Kec. Gayungan, Surabaya</p>
                 <p class="telp">Telepon : <a href="">0897234567</a></p>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3957.375286497052!2d112.72461187431495!3d-7.3116690718883595!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7fb4cb05e34ed%3A0x90f4c8a169558495!2sVokasi%20UNESA!5e0!3m2!1sid!2sid!4v1702960776391!5m2!1sid!2sid" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="map"></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3957.375286497052!2d112.
+                    72461187431495!3d-7.3116690718883595!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7fb4cb05e34ed%3A0x
+                    90f4c8a169558495!2sVokasi%20UNESA!5e0!3m2!1sid!2sid!4v1702960776391!5m2!1sid!2sid" allowfullscreen="" loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade" class="map"></iframe>
             </div>
             <div class="row-kritik-saran">
                 <h3>Kritik & Saran</h3>

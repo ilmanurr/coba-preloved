@@ -74,7 +74,8 @@ function getTotalCartQuantity() {
     <!-- font style -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,700;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,700;1,700&display=swap" 
+    rel="stylesheet">
 
     <!-- feather icons -->
     <script src="https://unpkg.com/feather-icons"></script>
@@ -142,7 +143,6 @@ function getTotalCartQuantity() {
     <section class="product" id="all-products">
         <h2><span>Produk</span> Kami</h2>
         <div class="row" id="row-all-product">
-
         <?php
         // Fetch data from the database
         include_once 'crud/config.php';
@@ -161,8 +161,12 @@ function getTotalCartQuantity() {
                 echo '<p class="produk-price">Rp ' . number_format($row['harga_satuan'], 0, ',', '.') . '</p>'; 
                 // Add an anchor link to submit the product details to the shopping cart
                 echo '<div class="produk-button">';
-                echo '<a href="produk-kami.php?tambahkan_keranjang=true&product_id=' . $row['id'] . '&product_name=' . urlencode($row['nama_produk']) . '&product_price=' . $row['harga_satuan'] . '&product_image=' . urlencode($row['foto']) . '" class="masukkan-keranjang">Masukkan keranjang</a>';
-                echo '<a href="#modal-' . strtolower(str_replace(" ", "-", $row['nama_produk'])) . '?product_id=' . $row['id'] . '&product_name=' . urlencode($row['nama_produk']) . '&product_price=' . $row['harga_satuan'] . '&product_image=' . urlencode($row['foto']) . '" class="detail-produk">Detail</a>';
+                echo '<a href="produk-kami.php?tambahkan_keranjang=true&product_id=' . $row['id'] . 
+                    '&product_name=' . urlencode($row['nama_produk']) . '&product_price=' . $row['harga_satuan'] . 
+                    '&product_image=' . urlencode($row['foto']) . '" class="masukkan-keranjang">Masukkan keranjang</a>';
+                echo '<a href="#modal-' . strtolower(str_replace(" ", "-", $row['nama_produk'])) . 
+                '?product_id=' . $row['id'] . '&product_name=' . urlencode($row['nama_produk']) . '&product_price=' 
+                . $row['harga_satuan'] . '&product_image=' . urlencode($row['foto']) . '" class="detail-produk">Detail</a>';
                 echo '</div>';
                 echo '</div>';
             }
@@ -195,7 +199,8 @@ function getTotalCartQuantity() {
                 </div>
                 <div class="konten-produk">
                     <h3 class="produk-tittle">Sweater Stripe</h3>
-                    <p class="deskripsi-produk">deskripsi produk bla bla bla Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat omnis nisi alias temporibus, quos eos.</p>
+                    <p class="deskripsi-produk">Sweater Stripe ini terbuat dari bahan yang lembut. Berukuran L dengan panjang 70 cm 
+                        dan lebar 120 cm. Kondisinya 9/10. Tidak ada kerusakan.</p>
                     <p class="produk-price">Rp 60.000</p>
                 </div>
             </div>

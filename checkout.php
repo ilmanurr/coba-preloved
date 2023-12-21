@@ -52,7 +52,8 @@ $_SESSION['previous_orders'] = $previousOrders;
     <!-- font style -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,700;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,700;1,700&display=swap" 
+    rel="stylesheet">
 
     <!-- feather icons -->
     <script src="https://unpkg.com/feather-icons"></script>
@@ -71,7 +72,8 @@ $_SESSION['previous_orders'] = $previousOrders;
                         <p>Nama Penerima</p>
                         <input type="text" placeholder="Nama Penerima" name="nama">
                         <p>Alamat Pengiriman</p>
-                        <textarea name="alamat_penerima" id="alamat" cols="30" rows="10" placeholder="Masukkan Alamat Lengkap"></textarea>
+                        <textarea name="alamat_penerima" id="alamat" cols="30" rows="10" 
+                            placeholder="Masukkan Alamat Lengkap"></textarea>
                     </div>
                     <hr>
                     <div class="produk-dipilih">
